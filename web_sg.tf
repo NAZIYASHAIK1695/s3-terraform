@@ -1,15 +1,22 @@
 # creating Security Group
-resource "aws_security_group" "tomcat_sg" {
-  vpc_id = "${aws_vpc.myvpc.id}"
+resource "aws_security_group" "demosg" {
+  vpc_id = "${aws_vpc.demovpc.id}"
 # Inbound Rules
 
-# custom tcp access from anywhere
+# HTTP access from anywhere
   ingress {
-    from_port = 8080
-    
-    to_port = 8080
+    from_port = 80
+    to_port = 80
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
+}
+
+# HTTPS access from anywhere
+ingress {
+  from_port = 443
+  to_port = 443
+  protocol = "tcp"
+  cidr_blocks = ["0.0.0.0/0"]
 }
 
 # SSH access from anywhere
@@ -29,7 +36,7 @@ egress {
   cidr_blocks = ["0.0.0.0/0"]
 }
   tags = {
-    Name = "Tomcat_SG"
+    Name = "Web SG"
 }
 }
-                                  
+                                           
