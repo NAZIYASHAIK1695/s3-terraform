@@ -1,5 +1,5 @@
 # creating Security Group
-resource "aws_security_group" "demosg" {
+resource "aws_security_group" "web_sg" {
   vpc_id = "${aws_vpc.myvpc.id}"
 # Inbound Rules
 
