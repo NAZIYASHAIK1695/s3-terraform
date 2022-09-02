@@ -3,6 +3,6 @@ variable "vpc_cidr" {
  default = "10.0.0.0/16"
 }
 # Defining CIDR Block for public Subnet
-variable "subnet1_cidr" {
+variable "subnet_cidr" {
  default = "10.0.1.0/24"
 }
