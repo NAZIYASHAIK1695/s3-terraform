@@ -6,3 +6,8 @@ variable "vpc_cidr" {
 variable "subnet_cidr" {
  default = "10.0.1.0/24"
 }
+variable "inclusio-demo-naziya.shaik" {}
+
+variable "acl_value" {
+    default = "private"
+}
