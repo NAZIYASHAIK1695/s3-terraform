@@ -1,6 +1,6 @@
 # creating Security Group
 resource "aws_security_group" "demosg" {
-  vpc_id = "${aws_vpc.demovpc.id}"
+  vpc_id = "${aws_vpc.myvpc.id}"
 # Inbound Rules
 
 # HTTP access from anywhere
